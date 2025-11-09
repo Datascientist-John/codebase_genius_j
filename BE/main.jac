@@ -13,6 +13,9 @@ glob llm = Model(model_name="gemini/gemini-2.0-flash", verbose=False);
 
 # API walker to handle requests
 walker generate_docs {
+    obj __specs__{
+        static has auth: bool =False;
+    }
     has github_url: str;
     has response: dict = {};
     
